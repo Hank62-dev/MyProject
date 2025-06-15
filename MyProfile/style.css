@@ -1,17 +1,23 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(90deg, rgba(77, 194, 240, 1) 0%, rgba(120, 67, 161, 1) 100%);
+  background: #000;
+  background: linear-gradient(90deg, rgb(59, 58, 58) 0%, rgba(169, 173, 173, 0.838) 100%);
   font-family: Arial, sans-serif;
   position: relative;
   overflow: auto;
   height: 100vh; /* Đảm bảo body có chiều cao đầy đủ */
-  width: 75vw; /* Đảm bảo body có chiều rộng đầy đủ */
+  width: 44vw; /* Đảm bảo body có chiều rộng đầy đủ */
 }
 
 a{
   text-decoration: none;
   color: #fff;
+}
+
+*::selection {
+  background-color: rgba(255, 255, 255, 0.68);
+  color: #000000;
 }
 
 #particles-js {
@@ -28,7 +34,7 @@ a{
   z-index: 0; /* Nội dung vẫn nằm trên hiệu ứng */
 }
 
-
+/****Title HANK ****/
 .name {
   width:50px;
   margin-left: 50px;
@@ -46,11 +52,11 @@ a{
 .name:hover {
   transform: translateX(-10px);
   transition: transform 0.3s ease;
-  color: #000000;
-  text-shadow: 2px 8px 10px rgba(90, 255, 249, 0.77);
+  color: #ffffff;
+  text-shadow: 2px 8px 10px rgb(253, 251, 251);
 }
 
-
+/*icons fb, ins, github, tiktok*/
 .social-icons {
   justify-content: left;
   position: relative;
@@ -63,22 +69,21 @@ a{
   border: 3px solid;
   border-radius: 100px;
   margin: 10px;
-  color: #fff;
+  color: #f4e7e7;
   font-size: 25px;
 }
 .social-icons a:hover {
-  background-color: rgba(59, 57, 57, 0.92);
-  color: #6be7e7;
-  box-shadow: 0px 0px 15px 5px rgb(90, 255, 249, 0.77);
+  background-color: rgba(245, 241, 241, 0.92);
+  color: #000000;
+  box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.77);
   transform: translateY(-5px);
   transition: transform 0.2s ease, box-shadow 0.3s ease-in-out;
-
 }
 .social-icons a i {
   padding: 10px;
 }
 
-
+/*******HOME*****/
 .p1, .fname, p {
   color: #fff;
   font-weight: 900;
@@ -96,11 +101,9 @@ a{
   transition: transform 0.3s ease;
   z-index: 0;
 }
-
-
 .fname {
   width:450px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-size: 70px;
   bottom: -60px;
   left: 50px;
@@ -125,7 +128,18 @@ a{
   bottom: 20px;
   left: 50px;
   line-height: 1.5;
-  
+
+}
+
+.introplus{
+  width: 550px;
+  color:rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 35px;
+  position: absolute;
+  bottom: 230px;
+  left: 170px;
+  line-height: 1.5;
 }
  .intro1{
   width: 440px;
@@ -137,9 +151,10 @@ a{
   left: 50px;
   line-height: 1.5;
  }
-.intro:hover, .intro1:hover{
+ .intro1:hover{
   color: #000000;
   transform: scale(1.05);
+  font-weight: bold;
   transition: transform 0.3s ease;
   text-shadow: 0px 0px 5px rgb(255, 255, 255);
   transition: transform 0.3s ease, text-shadow 0.3s ease-in-out;
@@ -156,7 +171,7 @@ a{
   padding-right: 7px;
   border: 2px solid rgb(235, 235, 235);
   border-radius: 30px;
-  color: rgb(1, 1, 1);
+  color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 20px;
   position: relative;
@@ -171,19 +186,19 @@ a{
   color: #fffcfc;
   border: 2px solid black;
   transform: scale(1.05);
-  box-shadow: 0px 8px 15px rgba(232, 228, 228, 0.912);
+  box-shadow: 0px 10px 15px rgba(232, 228, 228, 0.912);
   transition: transform 0.3s ease, background-color 0.3s ease;
   
 }
 
-/*toolbar*/
+/*****TOOLBAR******/
 .box {
   position: fixed;
   top: 15px;
   right: 10px;
   display: flex;
   align-items: center;
-  padding-right: 120px;
+  padding-right: 50px;
   background-color: rgba(0, 0, 0, 0.5); /* nền mờ */
   border-radius: 100px;
   z-index: 3;
@@ -194,24 +209,38 @@ a{
   color: #fff;
   font-size: 20px;
   text-align: center;
-  width: 90px;
-  border-radius: 100px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.155);
+  justify-content: center;
+  width: 55px;  
   margin: 15px;
-  padding: 15px;
+  padding: 10px;
   transition: transform 0.3s ease;
-  backdrop-filter: blur(20px);
-  position:relative;
-  right: -70px;
+  position: relative;
+  right: -20px;
   bottom: -1px;
   transition: transform 0.2s ease, box-shadow 0.3s ease-in-out;
 
 }
-.box h2:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-  transform: translateY(-7px);
-  box-shadow: 0px 0px 15px 4px  rgb(254, 254, 254);
+.box h2:hover{
+  transform: translateY(-5px);
 }
+
+.box h2::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #11e0cb;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-out;
+}
+
+.box h2:hover::after {
+  transform: scaleX(1);
+}
+
 
 
 .coverImg{
@@ -240,23 +269,25 @@ a{
   border-radius: 5000px;
   transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
 }
- .avatar:hover {
+.avatar:hover {
   transform: scale(1.15) translateY(-27.7px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/****gạch ngang *****/
 .styled-line {
   border: none;
   height: 2px;
-  background: rgba(255, 255, 255, 0.685);
+  background: rgb(255, 255, 255);
   margin: 40px auto;
   width: 90%;
   opacity: 1;
   position: relative;
-  right: -170px;
-  top: -350px;
+  right: -425px;
+  top: -360px;
 }
 
-/*About Me*/
+/*******ABOUT ME**********/
 #tiltleAbout{
   position: relative;
   top: -300px;
@@ -273,20 +304,25 @@ a{
 }
 #tiltleAbout1{
   position: relative;
-  top: -367px;
-  left: 300px;
+  top: -368.5px;
+  left: 296.5px;
   font-size: 60px;
   color: #000000;
   font-weight: bold;
   font-family: Georgia, 'Times New Roman', Times, serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+#tiltleAbout1::selection {
+  background-color: rgba(255, 255, 255, 0.68);
+  color: #ffffff;
+}
+
 .tiltleName{
   position: relative;
   top: -400px;
   left: 50px;
   font-size: 25px;
-  color: #000000;
+  color: #7d7878;
   font-weight: bold;
   font-family: Georgia, 'Times New Roman', Times, serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -307,11 +343,7 @@ a{
   box-shadow: 0px 20px 25px 15px rgba(0, 0, 0, 0.7);
   transition: background-color 0.2s ease-in-out, box-shadow 0.3s ease;
 }
-#AboutMe:focus {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border-radius: 10px;
-}
+
 
 #AboutMe p {
   margin: 5px;
@@ -343,4 +375,684 @@ a{
   right: -980px;
   backdrop-filter: blur(5px);/*làm mờ khung nền*/
 }
+
+/*gạch ngang phần skills*/
+.frameLine{
+  border: none;
+  height: 2px;
+  background: rgb(255, 255, 255);
+  margin: 40px auto;
+  width: 50%;
+  opacity: 1;
+  position: relative;
+  right: -40px;
+  top: -360px;
+}
+
+/***Skills***/
+#tiltleSkils{
+  position: relative;
+  top: -150px;
+  left: 50px;
+  font-size: 60px;
+  color: #fff;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#tiltleSkils1{
+  position: relative;
+  top: -259px;
+  left: 247px;
+  font-size: 60px;
+  color: #000000;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#tiltleSkils1::selection {
+  background-color: rgba(255, 255, 255, 0.68);
+  color: #ffffff;
+}
+
+#Skills{
+  position: relative;
+  top: -200px;
+  left: 100px;
+  width: 1200px;
+  height: 500px;
+  background-color: rgba(99, 95, 95, 0.177);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 0;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  bottom: -300px;
+}
+
+
+
+/***Skills content ***/
+.btnSkills{
+  border: none;
+  background: none;
+  color: white;
+  width:148px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size:20px;
+  font-weight: bold;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  gap: 20px;
+  justify-content: center;
+  position: relative;
+  top: -70px;
+  right: -450px;
+}
+.btnSkills::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; /* khoảng cách dưới chữ */
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #11e0cb;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-out;
+}
+.btnSkills:hover::after {
+  transform: scaleX(1);
+}
+
+
+/***Tools Tech***/
+.btnTools{
+  border: none;
+  background: none;
+  color: white;
+  width:70px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  gap: 20px;
+  justify-content: center;
+  position: relative;
+  top: -116px;
+  right: -660px;
+}
+.btnTools::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; /* khoảng cách dưới chữ */
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #11e0cb;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-out;
+}
+.btnTools:hover::after {
+  transform: scaleX(1);
+}
+
+
+
+@keyframes fade {
+      from {opacity: 0;}
+      to {opacity: 1;}
+}
+
+
+
+
+
+
+/**Tech Language **/
+#techLang {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 20px;
+  position: relative;
+  top: -120px;
+}
+
+/* Mỗi khung icon */
+.tech-item {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+}
+
+.tech-item i {
+  font-size: 60px;
+  transition: transform 0.3s ease;
+}
+
+.tech-name {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tech-name small {
+  font-size: 12px;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* Hover effect */
+.tech-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.734);
+  background: #756f6fc5;
+}
+
+.tech-item:hover i {
+  transform: translateY(-30px);
+}
+
+.tech-item:hover .tech-name {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/**Tools Tech **/
+#tools {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  display: none;
+  width: 1200px;;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 20px;
+  position: relative;
+  top: -595px;
+  right: -80px;
+}
+
+.tool-item {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  margin: 20px;
+  padding-bottom: 22px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.tool-item i,
+.tool-item img {
+  font-size: 60px;
+  height: 70px;
+  transition: transform 0.3s ease;
+}
+
+/** Chỉnh khung riêng NetBeans logo */
+.tool-item .netBeansLogo{
+  width: 150px;
+  height: 100px;
+  object-fit: contain;
+  display: block;
+  position: relative;
+  top: -15px;
+}
+.tool-item #netbeans{
+  height: 1px;
+  position: relative;
+  top: -35px; 
+}
+
+
+.tool-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tool-name small {
+  font-size: 12px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.tool-item:hover {
+  transform: scale(1.1);
+  background: #756f6fc5;
+  box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.734);
+}
+
+.tool-item:hover i,
+.tool-item:hover img {
+  transform: translateY(-30px);
+}
+
+.tool-item:hover .tool-name {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+#techLang.show, #tools.show {
+  opacity: 1;
+  pointer-events: auto;
+  display: flex;
+}
+
+
+
+/**My Project**/
+#myProject{
+  position: relative;
+  bottom: -200px;
+  right: -110px;
+  width: 1200px;
+  height: 500px;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 0;
+  position: relative;
+  bottom: -100px;
+}
+
+.frameLineProject{
+  border: none;
+  height: 2px;
+  background: rgb(255, 255, 255);
+  margin: 40px auto;
+  width: 50%;
+  opacity: 1;
+  position: relative;
+  right: -40px;
+  top: -450px;
+}
+
+#tiltleProject{
+  position: relative;
+  bottom: 10px;
+  left: 50px;
+  font-size: 60px;
+  color: #fff;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#tiltleProject1{
+  position: relative;
+  top: -119px;
+  right: -170.5px;
+  font-size: 60px;
+  color: #000000;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#tiltleProject1::selection {
+  background-color: rgba(255, 255, 255, 0.68);
+  color: #ffffff;
+} 
+
+#myProject h1 {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.myRecent{
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  color: #ffffff;
+  position: relative;
+  top: -300px;
+  right: -430px;
+}
+.works{
+  width: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  color: #f8db00;
+  position: relative;
+  top: -363.5px;
+  right: -630.5px;
+}
+
+.p7{
+  color: #ffffff;
+  font-weight: bold; 
+  font-size: 18px;
+  position: relative;
+  top: -380px;
+  right: -20px;
+  text-align: center;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+/***List Projects***/
+.project-item1{
+  width: 300px;
+  height: 250px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: absolute;
+  top: -50px;
+  z-index: 1;
+}
+.project-item1 h2 {
+  opacity: 0;
+}
+.project-item1 p {
+  opacity: 0;
+}
+
+.vicalHealthImage{
+  position: relative;
+  top: -105px;
+}
+
+.project-item1:hover {
+  width: 300px;
+  height: 400px;
+  transition:width 0.5s ease, height 0.5s ease, transform 0.5s ease;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  background: #a4b9bf;
+  background: linear-gradient(-130deg,rgba(164, 185, 191, 1) 26%, rgba(15, 191, 97, 1) 82%);
+}
+.project-item1:hover h2{
+  opacity: 1;
+  position: relative;
+  bottom: -220px;
+  transition: opacity 2.5s ease, bottom 2.5s ease;
+}
+
+.project-item1:hover p{
+  opacity: 1;
+  position: relative;
+  bottom: -220px;
+  transition: opacity 2.5s ease, bottom 2.5s ease;
+}
+
+
+
+
+
+/**Project2**/
+.project-item2{
+  width: 300px;
+  height: 250px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: absolute;
+  top: -50px;
+  left: 460px;
+  /***/
+}
+.project-item2 h2 {
+  opacity: 0;
+}
+.project-item2 p {
+  opacity: 0;
+}
+.VQHTimage{
+  position: relative;
+  top: -90px;
+}
+.project-item2:hover{
+  width: 300px;
+  height: 400px;
+  transition:width 0.5s ease, height 0.5s ease, transform 0.5s ease;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  background: #a4b9bf;
+  background: linear-gradient(-122deg, rgba(164, 185, 191, 1) 14%, rgba(37, 217, 73, 1) 82%);
+}
+.project-item2:hover h2{
+  opacity: 1;
+  position: relative;
+  bottom: -220px;
+  transition: opacity 2.5s ease, bottom 2.5s ease;
+}
+
+.project-item2:hover p{
+  opacity: 1;
+  position: relative;
+  bottom: -220px;
+  transition: opacity 2.5s ease, bottom 2.5s ease;
+}
+
+
+
+/**Project 3**/
+.project-item3{
+  width: 300px;
+  height: 250px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: absolute;
+  top: -50px;
+  right: 20px;
+}
+
+.project-item3 h2 {
+  opacity: 0;
+}
+.project-item3 p {
+  opacity: 0;
+}
+
+.smartStudentImage{
+  position: relative;
+  top: -70px;
+}
+
+.project-item3:hover{
+  width: 300px;
+  height: 400px;
+  transition:width 0.5s ease, height 0.5s ease, transform 0.5s ease;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  background: #09aedb;
+  background: linear-gradient(-287deg, rgba(9, 174, 219, 1) 38%, rgba(250, 245, 245, 1) 100%);
+}
+.project-item3:hover h2{
+  opacity: 1;
+  position: relative;
+  bottom: -220px;
+  transition: opacity 2.5s ease, bottom 2.5s ease;
+}
+
+.project-item3:hover p{
+  opacity: 1;
+  position: relative;
+  bottom: -220px;
+  transition: opacity 2.5s ease, bottom 2.5s ease;
+}
+
+
+
+/**Project 4***/
+.project-item4{
+  width: 300px;
+  height: 250px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 405px;
+  left: 230px;
+}
+
+.project-item4 h2 {
+  opacity: 0;
+}
+.project-item4 p {
+  opacity: 0;
+}
+
+.bankImage{
+  position: relative;
+  top: -70px;
+}
+.project-item4:hover{
+  width: 300px;
+  height: 400px;
+  transition:width 0.5s ease, height 0.5s ease, transform 0.5s ease;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  background: #ffffff;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 1) 0%, rgba(71, 230, 222, 1) 60%, rgba(69, 64, 64, 1) 100%);
+}
+.project-item4:hover h2{
+  opacity: 1;
+  position: relative;
+  bottom: -220px;
+  transition: opacity 2.5s ease, bottom 2.5s ease;
+}
+
+.project-item4:hover p{
+  opacity: 1;
+  position: relative;
+  bottom: -220px;
+  transition: opacity 2.5s ease, bottom 2.5s ease;
+}
+
+
+
+/**Project 5***/
+.project-item5{
+  width: 300px;
+  height: 250px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 410px;
+  right: 250px;
+}
+
+.project-item5 h2 {
+  opacity: 0;
+}
+.project-item5 p {
+  opacity: 0;
+}
+
+.project5{
+  position: relative;
+  top: -95px;
+}
+.project-item5:hover{
+  width: 300px;
+  height: 400px;
+  transition:width 0.5s ease, height 0.5s ease, transform 0.5s ease;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  background: #9900ff;
+  background: linear-gradient(93deg, rgba(153, 0, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+.project-item5:hover h2{
+  opacity: 1;
+  position: relative;
+  bottom: -220px;
+  transition: opacity 3.5s ease, bottom 2.5s ease;
+}
+
+.project-item5:hover p{
+  opacity: 1;
+  position: relative;
+  bottom: -220px;
+  transition: opacity 3.5s ease, bottom 2.5s ease;
+}
+
+
+
+
+
+
+
+
+/**Contact**/
+#Contact{
+  position: relative;
+  bottom: -850px;
+  left: 50px;
+  width: 1200px;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 0;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+}
+
 

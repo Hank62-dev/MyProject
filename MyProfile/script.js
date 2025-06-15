@@ -36,4 +36,18 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     retina_detect: true
   });
+
 });
+
+/**Hiệu ứng ẩn hiện tech icons**/
+function showSection(id) {
+  const sections = ['techLang', 'tools'];
+
+  sections.forEach(sectionId => {
+    const section = document.getElementById(sectionId);
+    section.classList.remove('show');
+  });
+
+  const active = document.getElementById(id);
+  active.classList.add('show');
+}
