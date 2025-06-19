@@ -47,40 +47,13 @@ a{
   text-shadow: 2px 2px 4px #000;
   position: relative;
   top: -5px;
-  z-index: 4;
+  z-index: 4 ;
 }
 .name:hover {
   transform: translateX(-10px);
   transition: transform 0.3s ease;
   color: #ffffff;
   text-shadow: 2px 8px 10px rgb(253, 251, 251);
-}
-
-/*icons fb, ins, github, tiktok*/
-.social-icons {
-  justify-content: left;
-  position: relative;
-  top: -440px;
-  right: -50px;
-  gap: 15px;
-}
-.social-icons a {
-  display: inline-block;
-  border: 3px solid;
-  border-radius: 100px;
-  margin: 10px;
-  color: #f4e7e7;
-  font-size: 25px;
-}
-.social-icons a:hover {
-  background-color: rgba(245, 241, 241, 0.92);
-  color: #000000;
-  box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.77);
-  transform: translateY(-5px);
-  transition: transform 0.2s ease, box-shadow 0.3s ease-in-out;
-}
-.social-icons a i {
-  padding: 10px;
 }
 
 /*******HOME*****/
@@ -262,7 +235,7 @@ a{
   height: 440px;
   position: relative;
   z-index: 2;
-  top: -506.5px;
+  top: -437.5px;
   right: -935px;
   border-style: calc(100px) solid;
   image-rendering: pixelated;
@@ -699,7 +672,7 @@ a{
   bottom: -100px;
 }
 
-.frameLineProject{
+  .frameLineProject{
   border: none;
   height: 2px;
   background: rgb(255, 255, 255);
@@ -760,7 +733,7 @@ a{
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  color: #f8db00;
+  color: #11e0cb;
   position: relative;
   top: -363.5px;
   right: -630.5px;
@@ -795,6 +768,8 @@ a{
   z-index: 1;
 }
 .project-item1 h2 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
   opacity: 0;
 }
 .project-item1 p {
@@ -802,6 +777,7 @@ a{
 }
 
 .vicalHealthImage{
+  border-radius: 10px;
   position: relative;
   top: -105px;
 }
@@ -849,12 +825,16 @@ a{
   /***/
 }
 .project-item2 h2 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
   opacity: 0;
 }
 .project-item2 p {
   opacity: 0;
 }
 .VQHTimage{
+  
+  border-radius: 10px;
   position: relative;
   top: -90px;
 }
@@ -899,6 +879,8 @@ a{
 }
 
 .project-item3 h2 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
   opacity: 0;
 }
 .project-item3 p {
@@ -906,8 +888,9 @@ a{
 }
 
 .smartStudentImage{
+  border-radius: 10px;
   position: relative;
-  top: -70px;
+  top: -100px;
 }
 
 .project-item3:hover{
@@ -951,15 +934,19 @@ a{
 }
 
 .project-item4 h2 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
   opacity: 0;
 }
 .project-item4 p {
+  position: relative;
   opacity: 0;
 }
 
 .bankImage{
+  border-radius: 10px;
   position: relative;
-  top: -70px;
+  top: -150px;
 }
 .project-item4:hover{
   width: 300px;
@@ -1002,23 +989,27 @@ a{
 }
 
 .project-item5 h2 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
+  align-items: center;
   opacity: 0;
 }
 .project-item5 p {
   opacity: 0;
 }
 
-.project5{
+.timeMana{
+  border-radius: 10px;
   position: relative;
-  top: -95px;
+  top: -125px;
 }
 .project-item5:hover{
   width: 300px;
   height: 400px;
   transition:width 0.5s ease, height 0.5s ease, transform 0.5s ease;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
-  background: #9900ff;
-  background: linear-gradient(93deg, rgba(153, 0, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: #59a5ec;
+  background: linear-gradient(93deg, rgb(85, 201, 231) 0%, rgb(0, 0, 0) 100%);
 }
 .project-item5:hover h2{
   opacity: 1;
@@ -1042,17 +1033,86 @@ a{
 
 
 /**Contact**/
-#Contact{
+
+/*icons fb, ins, github, tiktok*/
+.contact{
+  color: white;
   position: relative;
-  bottom: -850px;
-  left: 50px;
-  width: 1200px;
-  height: 500px;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
-  padding: 20px;
-  margin: 0;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  right: -110px;
+  bottom: -50px;
+}
+
+#Contact ul li{
+  color: white;
+  position: relative;
+  right: -50px;
+  bottom: -70px;  
+}
+
+#Contact span{
+  color: white;
+  position: relative;
+  font-weight: bold;
+  font-size: 20px;
+  right: -70px;
+  bottom: -70px;
+}
+
+#Contact address{
+  color: white;
+  position: relative;
+  right: -900px;
+  top: -100px;
+}
+
+.social-icons {
+  justify-content: left;
+  position: relative;
+  bottom: -40px;
+  right: -50px;
+  gap: 15px;
+}
+.social-icons a {
+  display: inline-block;
+  border: 3px solid;
+  border-radius: 100px;
+  margin: 10px;
+  color: #f4e7e7;
+  font-size: 25px;
+}
+.social-icons a:hover {
+  background-color: rgba(245, 241, 241, 0.92);
+  color: #000000;
+  box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.77);
+  transform: translateY(-5px);
+  transition: transform 0.2s ease, box-shadow 0.3s ease-in-out;
+}
+.social-icons a i {
+  padding: 10px;
 }
 
 
+#Contact{
+  position: relative;
+  bottom: -650px;
+  right: 10px;
+  width: 1462px;
+  height: 350px;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+footer p{
+  position: relative;
+  right: -720px;
+  bottom: -589px;
+  font-family:'Courier New', Courier, monospace;
+}
+
+footer span{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  position: relative;
+  right: -600px;
+  bottom: -620px;
+}
