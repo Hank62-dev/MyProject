@@ -1098,8 +1098,8 @@ a{
   right: 10px;
   width: 1462px;
   height: 350px;
-  background-color: rgb(0, 0, 0);
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.351);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.839);
 }
 
 footer p{
