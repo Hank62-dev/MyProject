@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth; /*Thanh trượt sẽ trượt mượt tới trang*/
+}
 body {
   margin: 0;
   padding: 0;
@@ -6,8 +9,9 @@ body {
   font-family: Arial, sans-serif;
   position: relative;
   overflow: auto;
-  height: 100vh; /* Đảm bảo body có chiều cao đầy đủ */
-  width: 44vw; /* Đảm bảo body có chiều rộng đầy đủ */
+  height: 100vh; 
+  width: 44vw; 
+  overflow-X: hidden;
 }
 
 a{
@@ -53,7 +57,7 @@ a{
   transform: translateX(-10px);
   transition: transform 0.3s ease;
   color: #ffffff;
-  text-shadow: 2px 8px 10px rgb(253, 251, 251);
+  text-shadow: 2px 8px 5px rgb(73, 202, 222);
 }
 
 /*******HOME*****/
@@ -86,7 +90,7 @@ a{
 }
 .fname:hover {
   color: #000000;
-  text-shadow: 5px 8px 10px rgba(255, 255, 255, 0.77);
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.962);
   transform: translateY(-18px);
   transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
 }
@@ -127,10 +131,10 @@ a{
  .intro1:hover{
   color: #000000;
   transform: scale(1.05);
-  font-weight: bold;
+  font-weight: bolder;
   transition: transform 0.3s ease;
-  text-shadow: 0px 0px 5px rgb(255, 255, 255);
-  transition: transform 0.3s ease, text-shadow 0.3s ease-in-out;
+  text-shadow: 0px 0px 25px rgb(255, 255, 255);
+  transition: transform 0.3s ease, text-shadow 0.3s ease-in-out, color 0.4s ease;
 }
 
 
@@ -172,14 +176,14 @@ a{
   display: flex;
   align-items: center;
   padding-right: 50px;
-  background-color: rgba(0, 0, 0, 0.5); /* nền mờ */
+  background-color: rgba(106, 106, 106, 0.564);
   border-radius: 100px;
   z-index: 3;
-  backdrop-filter: blur(10px); /* làm mờ khung nền */
+  backdrop-filter: blur(5px); /* làm mờ khung nền */
 }
 
 .box h2 {
-  color: #fff;
+  color: #000000;
   font-size: 20px;
   text-align: center;
   justify-content: center;
@@ -220,12 +224,12 @@ a{
   width: 440px;
   height: 440px;
   border-radius: 1000px;
-  box-shadow: 10px 25px 35px rgba(0, 0, 0, 0.625);
+  box-shadow: 0px 0px 25px rgb(0, 0, 0);
   position: absolute;
   z-index: 1;
   top: 140px;
   left: 880px;
-  backdrop-filter: blur(5px);/*làm mờ khung nền*/
+  backdrop-filter: blur(2px);/*làm mờ khung nền*/
   
 }
 .avatar{
@@ -244,7 +248,8 @@ a{
 }
 .avatar:hover {
   transform: scale(1.15) translateY(-27.7px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.5s ease, filter 0.4s ease;
+  filter: drop-shadow(0px 0px 15px rgb(3, 3, 3));
 }
 
 /****gạch ngang *****/
@@ -334,19 +339,20 @@ a{
 }
 .avatarAboutMe:hover {
   transform: scale(1.2) translateY(-37px);
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
+  filter: drop-shadow( 0 0 10px rgb(255, 255, 255));
 }
 .frameAboutMe{
   width: 330px;
   height: 330px;
   border-radius: 80px;
   background-color: rgba(244, 244, 244, 0.177);
-  box-shadow: 0px 0px px 5px rgba(255, 255, 255, 0.757);
+  box-shadow: 0px 0px 22px 5px rgba(0, 0, 0, 0.757);
   position: relative;
   z-index: -1;
   top: -200px;
   right: -980px;
-  backdrop-filter: blur(5px);/*làm mờ khung nền*/
+  backdrop-filter: blur(2px);/*làm mờ khung nền*/
 }
 
 /*gạch ngang phần skills*/
@@ -363,6 +369,7 @@ a{
 }
 
 /***Skills***/
+
 #tiltleSkils{
   position: relative;
   top: -150px;
@@ -400,7 +407,7 @@ a{
   border-radius: 20px;
   padding: 20px;
   margin: 0;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.99);
 }
 
 .skills-list {
@@ -418,7 +425,7 @@ a{
 .btnSkills{
   border: none;
   background: none;
-  color: white;
+  color: rgb(0, 0, 0);
   width:148px;
   display: flex;
   flex-wrap: wrap;
@@ -430,6 +437,7 @@ a{
   position: relative;
   top: -70px;
   right: -450px;
+  cursor: pointer;
 }
 .btnSkills::after {
   content: "";
@@ -447,12 +455,11 @@ a{
   transform: scaleX(1);
 }
 
-
 /***Tools Tech***/
 .btnTools{
   border: none;
   background: none;
-  color: white;
+  color: rgb(0, 0, 0);
   width:70px;
   display: flex;
   flex-wrap: wrap;
@@ -464,6 +471,7 @@ a{
   position: relative;
   top: -116px;
   right: -660px;
+  cursor: pointer;
 }
 .btnTools::after {
   content: "";
@@ -548,11 +556,12 @@ a{
 .tech-item:hover {
   transform: scale(1.1);
   box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.734);
-  background: #756f6fc5;
+  background: #505252c5;
 }
 
 .tech-item:hover i {
   transform: translateY(-30px);
+  filter: drop-shadow(0 5px 2px rgb(4, 4, 4))
 }
 
 .tech-item:hover .tech-name {
@@ -576,6 +585,7 @@ a{
   position: relative;
   top: -595px;
   right: -80px;
+  cursor: pointer;
 }
 
 .tool-item {
@@ -636,13 +646,14 @@ a{
 
 .tool-item:hover {
   transform: scale(1.1);
-  background: #756f6fc5;
+  background: #505252c5;
   box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.734);
 }
 
 .tool-item:hover i,
 .tool-item:hover img {
   transform: translateY(-30px);
+  filter: drop-shadow(0 5px 2px rgb(4, 4, 4));
 }
 
 .tool-item:hover .tool-name {
@@ -760,7 +771,7 @@ a{
   padding: 10px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 15px rgb(0, 0, 0);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   position: absolute;
@@ -816,7 +827,7 @@ a{
   padding: 10px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 15px rgb(0, 0, 0);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   position: absolute;
@@ -870,7 +881,7 @@ a{
   padding: 10px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 15px rgb(0, 0, 0);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   position: absolute;
@@ -925,7 +936,7 @@ a{
   padding: 10px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 15px rgb(0, 0, 0);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   position: absolute;
@@ -952,7 +963,7 @@ a{
   width: 300px;
   height: 400px;
   transition:width 0.5s ease, height 0.5s ease, transform 0.5s ease;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 15px rgb(0, 0, 0);
   background: #ffffff;
   background: linear-gradient(160deg, rgba(255, 255, 255, 1) 0%, rgba(71, 230, 222, 1) 60%, rgba(69, 64, 64, 1) 100%);
 }
@@ -980,7 +991,7 @@ a{
   padding: 10px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 15px rgb(0, 0, 0);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   position: absolute;
@@ -1007,7 +1018,7 @@ a{
   width: 300px;
   height: 400px;
   transition:width 0.5s ease, height 0.5s ease, transform 0.5s ease;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 15px rgb(0, 0, 0);
   background: #59a5ec;
   background: linear-gradient(93deg, rgb(85, 201, 231) 0%, rgb(135, 14, 228) 100%);
 }
@@ -1036,12 +1047,16 @@ a{
 
 /*icons fb, ins, github, tiktok*/
 .contact{
+  width: 180px;
   color: white;
   position: relative;
   right: -110px;
   bottom: -50px;
 }
-
+.contact:hover{
+  transform: translateY(-10px);
+  transition: transform 0.3s ease;
+}
 #Contact ul li{
   color: white;
   position: relative;
@@ -1061,7 +1076,7 @@ a{
 #Contact address{
   color: white;
   position: relative;
-  right: -900px;
+  right: -850px;
   top: -100px;
 }
 
@@ -1083,7 +1098,7 @@ a{
 .social-icons a:hover {
   background-color: rgba(245, 241, 241, 0.92);
   color: #000000;
-  box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.77);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.77);
   transform: translateY(-5px);
   transition: transform 0.2s ease, box-shadow 0.3s ease-in-out;
 }
@@ -1102,17 +1117,10 @@ a{
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.839);
 }
 
-footer p{
-  position: relative;
-  right: -720px;
-  bottom: -589px;
-  font-family:'Courier New', Courier, monospace;
-}
-
 footer span{
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   position: relative;
-  right: -600px;
+  right: -550px;
   bottom: -620px;
 }
